@@ -1,0 +1,21 @@
+{
+  "name": "cqcode",
+  "version": "1.0.1",
+  "description": "CQCode Helper for NodeJS.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "fix": "eslint . --fix"
+  },
+  "author": "YoumuKonpaku",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.27.0",
+    "eslint-config-ali": "^14.0.2",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "typescript": "^4.8.4"
+  }
+}
