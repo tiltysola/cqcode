@@ -9,5 +9,9 @@ export const serialize = (cqCode: CQCode): string => {
   const cqCodeDataStrArr = Object.keys(cqCode.data || {}).map((key) => {
     return `${key}=${cqCode.data[key]}`;
   });
-  return `[${cqCodeTypeStr},${cqCodeDataStrArr.join(',')}]`;
+  if (cqCodeDataStrArr.length > 0) {
+    return `[${cqCodeTypeStr},${cqCodeDataStrArr.join(',')}]`;
+  } else {
+    return `[${cqCodeTypeStr}]`;
+  }
 };

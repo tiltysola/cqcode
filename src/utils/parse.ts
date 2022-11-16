@@ -9,10 +9,10 @@ export const parse = (text: string): CQCode => {
     throw new Error('Not a valid CQCode string.');
   }
   const splitArr = text.substring(1, text.length - 1).split(',');
-  if (splitArr.length < 1) {
-    throw new Error('Could not find CQ:{type} field.');
+  const cqCodeTypeArr = (splitArr[0] || '').split(':');
+  if (cqCodeTypeArr.length !== 2) {
+    throw new Error('CQ:{type} field invalid.');
   }
-  const cqCodeTypeArr = splitArr[0].split(':');
   if (cqCodeTypeArr[0] !== 'CQ') {
     throw new Error('Could not find CQ:{type} field.');
   }
